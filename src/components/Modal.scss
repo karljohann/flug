@@ -1,0 +1,28 @@
+@import '../variables';
+
+.flugleidir-modal {
+  background-color: $flugleidir-backblack;
+  bottom: 0;
+  left: 0;
+  padding: 50px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+
+  .flugleidir-modal-content {
+    background-color: $flugleidir-white;
+    border-radius: 3px;
+    margin: 0 auto;
+    max-width: 500px;
+    min-height: 300px;
+    padding: 30px;
+    position: relative;
+
+    .flugleidir-modal-footer {
+      bottom: 12px;
+      position: absolute;
+      right: 12px;
+    }
+  }
+}

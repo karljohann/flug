@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Pill from './Pill';
 import Icon from './Icon';
+import './Question.css';
 
 class Question extends Component {
   constructor(props) {

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Pill.css';
 
 function Pill(props) {
   const smallPill = (props.small);

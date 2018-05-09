@@ -1,6 +1,7 @@
 import React from 'react';
 import Pill from './Pill';
 import logo from '../logo.svg';
+import './Header.css';
 
 function Header() {
   return (

@@ -1,0 +1,21 @@
+@import '../variables';
+
+.flugleidir-main {
+  .flugleidir-main-header {
+    padding: 60px 0 20px;
+
+    * {
+      margin: 0 20px;
+    }
+  }
+
+  .flugleidir-show-more-button {
+    background-color: transparent;
+    border-color: $flugleidir-lightgrey;
+    color: $flugleidir-darkgrey;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 20px;
+    width: 100%;
+  }
+}

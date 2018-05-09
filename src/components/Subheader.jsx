@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tab from './Tab';
+import './Subheader.css';
 
 class Header extends Component {
   constructor(props) {

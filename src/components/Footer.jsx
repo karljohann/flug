@@ -1,5 +1,6 @@
 import React from 'react';
 import Pill from './Pill';
+import './Footer.css';
 
 function Footer() {
   const popularTags = [

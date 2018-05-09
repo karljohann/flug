@@ -3,6 +3,7 @@
 .flugleidir {
   background-color: $flugleidir-lightestgrey;
   font-family: $flugleidir-fonts;
+  min-width: fit-content;
   text-align: center;
   width: 100%;
 }
@@ -23,4 +24,10 @@
   margin: 0 auto;
   text-align: left;
   width: 980px;
+}
+
+.flugleidir-large-heading {
+  color: $flugleidir-darkgrey;
+  font-size: 40px;
+  margin: 6px 0 12px;
 }

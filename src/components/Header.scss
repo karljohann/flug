@@ -1,0 +1,28 @@
+@import '../variables';
+
+.flugleidir-header {
+  background-color: $flugleidir-white;
+  box-shadow: 0 1px 10px 0 $flugleidir-shadowblack;
+  height: 100px;
+
+  .flugleidir-header-content {
+    margin: 0 auto;
+    text-align: left;
+    width: 1174px;
+  }
+
+  .flugleidir-no-url-horiz-cmyk {
+    height: 46px;
+    margin: 27px 0;
+    width: 198px;
+  }
+
+  .flugleidir-header-right {
+    float: right;
+
+    .flugleidir-pill {
+      margin: 30px 0;
+    }
+  }
+
+}

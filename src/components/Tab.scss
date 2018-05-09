@@ -1,0 +1,32 @@
+@import '../variables';
+
+.flugleidir-subheader-tabs {
+  bottom: 0;
+  display: flex;
+  position: absolute;
+
+  :first-child {
+    margin-left: 0;
+  }
+
+  :last-child {
+    margin-right: 0;
+  }
+}
+
+.flugleidir-tab {
+  color: $flugleidir-white;
+  font-size: 18px;
+  height: 32px;
+  margin: 0 12px;
+  padding: 12px 0 0;
+  text-align: center;
+  text-decoration: none;
+  width: 180px;
+
+  &.active {
+    background-color: $flugleidir-lightestgrey;
+    border-radius: 3px 3px 0 0;
+    color: $flugleidir-blue;
+  }
+}

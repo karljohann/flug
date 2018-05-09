@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Question from './Question';
 import Pill from './Pill';
 import faqs from '../faqs.json';
+import './Main.css';
 
 class Main extends Component {
   constructor() {
