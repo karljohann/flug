@@ -11,7 +11,7 @@ git clone git@github.com:karljohann/flug.git
 cd flug
 yarn
 ```
-If all goes well, run `yarn start`. If not, be frustrated for 72 minutes and then rage posting on [some internet site] only to realise that you wrote `yarn strat`.
+To view project, run `yarn start`.
 
 # The Dev Environment Constitution
 
