@@ -1,0 +1,26 @@
+@import './variables';
+
+.flugleidir {
+  background-color: $flugleidir-lightestgrey;
+  font-family: $flugleidir-fonts;
+  text-align: center;
+  width: 100%;
+}
+
+.flugleidir-title {
+  color: $flugleidir-darkgrey;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.flugleidir-intro {
+  font-size: large;
+}
+
+.flugleidir-content {
+  margin: 0 auto;
+  text-align: left;
+  width: 980px;
+}
