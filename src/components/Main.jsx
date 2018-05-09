@@ -26,12 +26,21 @@ class Main extends Component {
   }
 
   render() {
+    const pillStyle = {
+      backgroundColor: 'transparent',
+      borderColor: '#407bac',
+      color: '#407bac',
+      float: 'right',
+      padding: '0px 24px',
+    };
+
     return (
       <div className="flugleidir-main">
         <div className="flugleidir-content flugleidir-main-header">
           <div className="flugleidir-title">Answers</div>
           <Pill
             title="Ask question"
+            style={pillStyle}
           />
         </div>
         <div className="flugleidir-main-questions flugleidir-content">
