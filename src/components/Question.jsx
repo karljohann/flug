@@ -9,16 +9,54 @@ class Question extends Component {
     super(props);
     this.state = {
       open: false,
+      likes: this.props.likes,
+      dislikes: this.props.dislikes,
+      hasVoted: false,
     };
 
     this.handleOpenClick = this.handleOpenClick.bind(this);
+    this.handleUpVote = this.handleUpVote.bind(this);
+    this.handleDownVote = this.handleDownVote.bind(this);
   }
 
   handleOpenClick() {
     this.setState(prevState => ({ open: !prevState.open }));
   }
 
+  // Increment likes count if user hasn't voted yet, else decrement.
+  handleUpVote() {
+    // FIXME: Do these properly
+    const { hasVoted, likes } = this.state;
+    this.setState({
+      likes: (hasVoted) ? likes - 1 : likes + 1,
+      hasVoted: (!hasVoted),
+    });
+  }
+
+  // Increment dislikes count if user hasn't voted yet, else decrement.
+  handleDownVote() {
+    const { hasVoted, dislikes } = this.state;
+    this.setState({
+      dislikes: (hasVoted) ? dislikes - 1 : dislikes + 1,
+      hasVoted: (!hasVoted),
+    });
+  }
+
   render() {
+    const styles = {
+      icon: {
+        cursor: 'pointer',
+        marginRight: '8px',
+        borderRadius: '10px',
+      },
+      pill: {
+        marginRight: '4px',
+        textTransform: 'capitalize',
+      },
+    };
+    const hasVotedStyle = '#fff0d0';
+    const hasVotedLike = (this.props.likes < this.state.likes);
+    const hasVotedDislike = (this.props.dislikes < this.state.dislikes);
     const handleTagClick = (tag) => {
       // FIXME
       console.log('Clicked on tag:', tag);
@@ -50,6 +88,7 @@ class Question extends Component {
                   key={tag}
                   onClick={() => { handleTagClick(tag); }}
                   title={tag}
+                  style={styles.pill}
                   small
                 />
               ))}
@@ -61,28 +100,37 @@ class Question extends Component {
               <Icon
                 glyph="thumb_up"
                 color="#497523"
+                style={{
+                  ...styles.icon,
+                  background: (hasVotedLike) ? hasVotedStyle : '',
+                }}
+                onClick={this.handleUpVote}
               />
               <div
                 className="flugleidir-question-like-text"
               >
-                {this.props.likes} likes
+                {this.state.likes} likes
               </div>
             </div>
             <div>
               <Icon
                 glyph="thumb_down"
                 color="#b43938"
+                style={{ ...styles.icon, background: (hasVotedDislike) ? hasVotedStyle : '' }}
+                onClick={this.handleDownVote}
               />
               <div
                 className="flugleidir-question-like-text"
               >
-                {this.props.dislikes} dislikes
+                {this.state.dislikes} dislikes
               </div>
             </div>
           </div>
         </div>
 
-        <div>
+        <div
+          className={`flugleidir-answer-wrapper${this.state.open ? ' flugleidir-answer-open' : ''}`}
+        >
           {this.state.open &&
             <div className="flugleidir-answer">
               <span>
