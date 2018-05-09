@@ -1,5 +1,7 @@
 import React from 'react';
+import Question from './Question';
 import Pill from './Pill';
+import faqs from '../faqs.json';
 
 function Main() {
   return (
@@ -11,7 +13,9 @@ function Main() {
         />
       </div>
       <div className="flugleidir-main-questions flugleidir-content">
-        Questions
+        {faqs.map(faq => (
+          <Question key={faq.key} {...faq} />
+        ))}
       </div>
     </div>
   );
