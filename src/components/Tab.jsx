@@ -10,13 +10,15 @@ class Tab extends Component {
   handleClick(e) {
     e.preventDefault();
 
-    console.log('Clicked on tab:', this.props.title);
+    const { title, path } = this.props;
+    console.log('Clicked on tab:', title); // eslint-disable-line no-console
+    this.props.onClick(path);
   }
 
   render() {
     return (
       <a
-        className="flugleidir-tab"
+        className={`flugleidir-tab${this.props.active ? ' active' : ''}`}
         href={this.props.path}
         onClick={this.handleClick}
       >
@@ -27,6 +29,8 @@ class Tab extends Component {
 }
 
 Tab.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  active: PropTypes.bool.isRequired,
   path: PropTypes.string.isRequired,
   title: PropTypes.string,
 };
