@@ -4,8 +4,16 @@
   .flugleidir-main-header {
     padding: 60px 0 20px;
 
-    * {
-      margin: 0 20px;
+    .flugleidir-title {
+      margin: 6px 18px;
+    }
+
+    .flugleidir-pill {
+      background-color: $flugleidir-lightestgrey;
+      border-color: $flugleidir-blue;
+      color: $flugleidir-blue;
+      float: right;
+      margin: 0 22px;
     }
   }
 

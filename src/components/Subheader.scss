@@ -16,7 +16,8 @@
   .flugleidir-search-box {
     background: url('../images/ic_search_black_24dp_1x.png') no-repeat scroll;
     background-color: $flugleidir-white;
-    background-position: right 40px top 22px;
+    background-position: right 38px top 24px;
+    background-size: 22px;
     border: 0;
     border-radius: 3px;
     box-shadow: 0 20px 50px 0 $flugleidir-shadowblack;
@@ -32,5 +33,19 @@
       color: $flugleidir-grey;
       font-weight: normal;
     }
+  }
+}
+
+.flugleidir-subheader-tabs {
+  bottom: 0;
+  display: flex;
+  position: absolute;
+
+  :first-child {
+    margin-left: 0;
+  }
+
+  :last-child {
+    margin-right: 0;
   }
 }

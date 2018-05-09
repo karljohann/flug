@@ -46,7 +46,7 @@ class Question extends Component {
     const styles = {
       icon: {
         cursor: 'pointer',
-        marginRight: '8px',
+        marginRight: '4px',
         borderRadius: '10px',
       },
       pill: {
@@ -54,7 +54,7 @@ class Question extends Component {
         textTransform: 'capitalize',
       },
     };
-    const hasVotedStyle = '#fff0d0';
+    const hasVotedStyle = 'mistyrose';
     const hasVotedLike = (this.props.likes < this.state.likes);
     const hasVotedDislike = (this.props.dislikes < this.state.dislikes);
     const handleTagClick = (tag) => {

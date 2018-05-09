@@ -6,8 +6,8 @@ function Pill(props) {
   const smallPill = (props.small);
   const pillStyle = {
     fontSize: (smallPill) ? '11px' : '16px',
-    lineHeight: (smallPill) ? '28px' : '38px',
-    padding: (smallPill) ? '0 12px' : '0 38px',
+    lineHeight: (smallPill) ? '18px' : '38px',
+    padding: (smallPill) ? '0 14px' : '0 42px',
     ...props.style,
   };
 

@@ -31,7 +31,7 @@ class Main extends Component {
       borderColor: '#407bac',
       color: '#407bac',
       float: 'right',
-      padding: '0px 24px',
+      padding: '0px 40px',
     };
 
     return (
